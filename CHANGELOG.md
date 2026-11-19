@@ -2,6 +2,11 @@
 
 All notable changes to `dashed-cookies` will be documented in this file.
 
+## v4.0.1 - 2026-11-19
+
+### Added
+- Engelse vertaling van de beheerteksten (`resources/lang/en.json`).
+
 ## v4.0.0 - 2026-11-19
 
 ### Added
