@@ -1,0 +1,51 @@
+{
+    "name": "dashed/dashed-cookies",
+    "description": "Cookie consent, cookie overview and consent logging for Dashed CMS",
+    "keywords": [
+        "Dashed",
+        "laravel",
+        "dashed-cookies",
+        "cookie consent",
+        "gdpr"
+    ],
+    "homepage": "https://github.com/Dashed-DEV/dashed-cookies",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robin van Maasakker",
+            "email": "robin@dashed.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.4|^8.5",
+        "dashed/dashed-core": "^4.115",
+        "spatie/laravel-package-tools": "^1.16"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.63",
+        "orchestra/testbench": "^9|^10|^11",
+        "pestphp/pest": "^2.35|^3.0|^4.0",
+        "pestphp/pest-plugin-laravel": "^2.4|^3.0|^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dashed\\DashedCookies\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dashed\\DashedCookies\\DashedCookiesServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
