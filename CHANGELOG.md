@@ -2,6 +2,11 @@
 
 All notable changes to `dashed-cookies` will be documented in this file.
 
+## v4.0.2 - 2026-11-19
+
+### Fixed
+- De melding over nieuwe cookies ging naar het basismodel `Dashed\DashedCore\Models\User` in plaats van het gebruikersmodel uit de auth-config, en kwam daardoor niet in het belletje van klantprojecten aan.
+
 ## v4.0.1 - 2026-11-19
 
 ### Added

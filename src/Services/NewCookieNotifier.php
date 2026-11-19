@@ -5,7 +5,6 @@ namespace Dashed\DashedCookies\Services;
 use Dashed\DashedCore\Classes\Mails;
 use Illuminate\Support\Facades\Mail;
 use Dashed\DashedCore\Classes\Sites;
-use Dashed\DashedCore\Models\User;
 use Filament\Notifications\Notification;
 use Filament\Actions\Action;
 use Dashed\DashedCookies\Classes\CookieSettings;
@@ -52,7 +51,12 @@ class NewCookieNotifier
         $title = __('Nieuwe cookies gevonden op :site', ['site' => $siteName]);
         $body = implode(' ', $lines);
 
-        foreach (User::query()->whereIn('role', ['admin', 'superadmin'])->get() as $admin) {
+        // Het model uit de auth-config: het belletje leest meldingen op de
+        // morph-klasse van de ingelogde gebruiker, en dat is in klantprojecten
+        // App\Models\User en niet het basismodel uit core.
+        $userModel = config('auth.providers.users.model') ?: \Dashed\DashedCore\Models\User::class;
+
+        foreach ($userModel::query()->whereIn('role', ['admin', 'superadmin'])->get() as $admin) {
             rescue(fn () => Notification::make()
                 ->title($title)
                 ->body($body)
