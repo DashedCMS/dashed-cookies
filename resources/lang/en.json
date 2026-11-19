@@ -200,5 +200,7 @@
     "Zie de details van de bevinding; alles is op te lossen bij Cookies en Instellingen, Cookies.": "See the details of the finding; everything can be fixed under Cookies and Settings, Cookies.",
     "Zoveel bezoekers telt Google Analytics nog volledig mee": "This share of visitors is still fully counted by Google Analytics",
     "Zoveel bezoekers zijn nog te volgen voor advertenties": "This share of visitors can still be tracked for ads",
-    "Zwevende cookieknop": "Floating cookie button"
+    "Zwevende cookieknop": "Floating cookie button",
+    "Toestemmingslogboek": "Consent log",
+    "Gepseudonimiseerd: alleen een toestemmings-ID, geen e-mailadres. Niet te koppelen aan deze persoon; de regels verlopen met de bewaartermijn.": "Pseudonymised: only a consent ID, no email address. Cannot be linked to this person; the entries expire with the retention period."
 }

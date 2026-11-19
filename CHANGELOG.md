@@ -2,6 +2,11 @@
 
 All notable changes to `dashed-cookies` will be documented in this file.
 
+## v4.1.0 - 2026-11-19
+
+### Added
+- AVG-provider (toont dat het toestemmingslog gepseudonimiseerd is).
+
 ## v4.0.2 - 2026-11-19
 
 ### Fixed

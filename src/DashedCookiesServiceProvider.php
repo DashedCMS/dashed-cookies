@@ -135,6 +135,12 @@ class DashedCookiesServiceProvider extends PackageServiceProvider
         self::registreerVertaalbaren();
         self::registreerControles();
 
+        // AVG-verzoeken: het toestemmingslogboek is gepseudonimiseerd en niet
+        // op e-mail te vinden; de provider legt dat uit in het overzicht.
+        if (method_exists(cms(), 'registerPersonalDataProvider')) {
+            cms()->registerPersonalDataProvider(\Dashed\DashedCookies\PersonalData\CookiesPersonalDataProvider::class);
+        }
+
         $this->app->booted(function () {
             /** @var Schedule $schedule */
             $schedule = app(Schedule::class);
