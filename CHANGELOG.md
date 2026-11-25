@@ -2,6 +2,11 @@
 
 All notable changes to `dashed-cookies` will be documented in this file.
 
+## v4.2.0 - 2026-11-25
+
+### Changed
+- Meldingen over nieuwe cookies gaan naar iedereen met toegang tot het CMS (superadmin of een rol) in plaats van de oude rolwaarden (vereist dashed-core ^4.124).
+
 ## v4.1.0 - 2026-11-19
 
 ### Added

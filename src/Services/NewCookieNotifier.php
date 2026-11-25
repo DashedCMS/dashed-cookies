@@ -56,7 +56,7 @@ class NewCookieNotifier
         // App\Models\User en niet het basismodel uit core.
         $userModel = config('auth.providers.users.model') ?: \Dashed\DashedCore\Models\User::class;
 
-        foreach ($userModel::query()->whereIn('role', ['admin', 'superadmin'])->get() as $admin) {
+        foreach ($userModel::query()->panelUsers()->get() as $admin) {
             rescue(fn () => Notification::make()
                 ->title($title)
                 ->body($body)
